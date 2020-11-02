@@ -20,7 +20,7 @@ interface IVetoProps {
 class VetoEntry extends React.Component<IVetoProps> {
     render(){
         const { veto, teams, active } = this.props;
-        return <div className={`veto_container ${active ? 'active' : ''}`}>
+        return <div id={'mappick' + veto.mapName} className={`veto_container ${active ? 'active' : ''}`}>
             <div className="veto_map_name">
                 {veto.mapName}
             </div>

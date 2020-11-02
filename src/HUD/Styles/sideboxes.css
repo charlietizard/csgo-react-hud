@@ -17,8 +17,10 @@
     opacity:0;
 }
 .utilitybox.hide, .moneybox.hide, .sidebox.hide {
-    height:0;
-    opacity:0;
+    height: 0;
+    opacity: 0;
+    margin-bottom: -2px !important;
+    margin-top: 0px !important;
 }
 
 .sidebox, .utilitybox, .moneybox {
@@ -31,6 +33,29 @@
     background-color: var(--sub-panel-color);
     margin-bottom: 4px;
     margin-top: 4px;
+}
+
+.nsebox {
+    width: 415px;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    transition: all 0.75s;
+    background-color: var(--sub-panel-color);
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.nseboxright {
+    height: 100px;
+}
+
+
+
+.nseboxleft {
+    background-image: url('./../../assets/images/BUEC.png');
+    background-color: transparent !important;
+    height: 144px;
 }
 
 .sidebox .title_container {
@@ -87,7 +112,7 @@
 .utilitybox {
     flex-direction: column;
     margin-bottom: 4px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 0 0 0 0;
 }
 
 .utilitybox .title_container {

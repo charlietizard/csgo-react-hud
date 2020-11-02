@@ -6,9 +6,8 @@ export default class WinAnnouncement extends React.Component<{ team: Team | null
     render() {
         const { team, show } = this.props;
         if(!team) return null;
-        return <div className={'nseline'}> <div className={`win_text ${show ? 'show' : ''} ${team.orientation} ${team.side}`}>
-            WINS THE ROUND!
-            </div>
+        return <div className={`win_text ${show ? 'show' : ''} ${team.orientation} ${team.side}`}>
+                WINS THE ROUND!
             </div>   
     }
 }

@@ -118,8 +118,10 @@ export default class Layout extends React.Component<Props, State> {
 
             <div className={"boxes right"}>
                 <div className={"nsebox nseboxright right"}>
-                    <video muted playsInline autoPlay loop>
+                    <video playsinline autoplay muted loop>
                         <source src={"http://charlie.gg/sponsors.webm"} type={"video/webm"}></source>
+                        <source src={"/assets/images/sponsors.mp4"} type={"video/mp4"}></source>
+                        <source src={"/assets/images/sponsors.ogg"} type={"video/ogg"}></source>
                     </video>
                 </div>
                 {/*   <SideBox side="right" hide={forceHide} /> */}

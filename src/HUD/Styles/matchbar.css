@@ -24,10 +24,10 @@
     position: relative;
     width: 126px;
     height: 115px;
-    margin-left:8px;
-    margin-right: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
     background-color: var(--sub-panel-color);
-    top: -10px;
+    top: 0px;
 }
 
 #matchbar #bomb_container {
@@ -75,7 +75,7 @@
 #matchbar #round_timer_text {
     display: flex;
     width: 100%;
-    height: 55px;
+    height: 60px;
     justify-content: center;
     /* line-height: 54px; */
     font-size: 34px;
@@ -128,6 +128,7 @@
     font-weight: 600;
     font-size: 30px;
     background-color: var(--sub-panel-color);
+    text-transform: uppercase;
 }
 
 #matchbar .round-thingy {
@@ -165,15 +166,15 @@
     left: -30px;
 }
 
-#matchbar .team .logo {
-    display: flex;
-    flex-direction: row;
-    width: 105px;
-    height: 70px;
-    align-items: center;
-    overflow: hidden;
-    background-color: var(--sub-panel-color);
-}
+    #matchbar .team .logo {
+        display: flex;
+        flex-direction: row;
+        width: 90px;
+        height: 70px;
+        align-items: center;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.90);
+    }
 #matchbar .team.left .logo {
     justify-content: flex-end;
 }
@@ -181,9 +182,17 @@
     justify-content: flex-start;
 }
 
+    #matchbar .team.left .logo img {
+        margin-right: 15px;
+    }
+
+    #matchbar .team.right .logo img {
+        margin-left: 15px;
+    }
+
 #matchbar .team .logo img {
     max-width: 90%;
-    max-height: 65%;
+    max-height: 85%;
 }
 
 #matchbar .score {
@@ -195,7 +204,7 @@
     justify-content: center;
     font-weight: 600;
     font-size: 36px;
-    background-color: var(--sub-panel-color);
+    background-color: var(--score-panel-color);
 }
 
 #matchbar .bar {
@@ -219,32 +228,36 @@
 	}
 	5% {
 		opacity: 1;
-		height: 50px;
+		height: 45px;
 	}
 	95% {
 		opacity: 1;
-		height: 50px;
+		height: 45px;
 	}
 	100% {
 		opacity: 0;
 		height: 0;
 	}
 }
+
+.nseline {
+    background-color: blue;
+    height: 45px;
+}
 .win_text {
     position: fixed;
     display: none;
-    opacity:1;
+    opacity: 1;
     /*transform: translateX(-50%);*/
     width: 503px;
-    height: 50px;
+    height: 40px;
     top: 70px;
-    align-items:center;
+    align-items: center;
     color: black;
     justify-content: center;
-    background-color: white;
     font-size: 20px;
-    font-family: Montserrat;
-    font-weight:600;
+    font-family: 'Titillium Web', 'Stratum2', 'Montserrat', 'Roboto', sans-serif;
+    font-weight: 700;
 }
 .win_text.show {
     display: flex;
@@ -252,10 +265,12 @@
 	animation-fill-mode: forwards;
 }
 .win_text.right {
-    left: calc(50% + 71px);
+    left: calc(50% + 63px);
+    background-color: white;
 }
 .win_text.left {
-    right: calc(50% + 71px);
+    right: calc(50% + 63px);
+    background-color: white;
 }
 
 
@@ -265,7 +280,7 @@
     opacity:1;
     /*transform: translateX(-50%);*/
     width: 503px;
-    height: 49px;
+    height: 45px;
     top: 70px;
     align-items:center;
     color: white;
@@ -273,16 +288,16 @@
     background-color: rgba(0,0,0,0.65);
 }
 .defuse_plant_container.right {
-    left: calc(50% + 71px);
+    left: calc(50% + 63px);
 }
 .defuse_plant_container.left {
-    right: calc(50% + 71px);
+    right: calc(50% + 63px);
 }
 .defuse_plant_container.hide {
     opacity: 0;
 }
 .defuse_plant_container .defuse_plant_bar {
-    height: 49px;
+    height: 45px;
     background-color: #3c3c3c;
     position: absolute;
     width: 0%;
@@ -298,7 +313,11 @@
     display: flex;
     text-transform: uppercase;
     align-items: flex-end;
+    font-weight:600;
+    margin-top:2px;
+    
 }
 .defuse_plant_container .defuse_plant_caption img {
     margin-right: 13px;
+    
 }
