@@ -99,6 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-color: var(--main-panel-color);
 }
 .teambox.right .player .player_data .avatar {
     justify-content: flex-start;
@@ -122,11 +123,13 @@
 }
     .teambox.left .player.active .player_data {
         border-right: 4px solid white;
+        ;
     }
 
-.teambox.right .player.active .player_data {
+    .teambox.right .player.active .player_data {
         border-left: 4px solid white;
-}
+        ;
+    }
 /*
 .teambox .player.active .player_data .active_border {
     position: absolute;
@@ -331,15 +334,24 @@
     transition: width 0.75s 1.5s;
 }
 
-    .teambox.CT .player .hp_bar {
+    .teambox.CT.left .player .hp_bar {
        
-        background: linear-gradient(270deg, rgba(20,158,232,1) 60%, rgba(19,114,166,1) 100%);
+        background: linear-gradient(270deg, rgba(20,158,232,1) 50%, rgba(19,114,166,1) 100%);
     }
 
-    .teambox.T .player .hp_bar {
-        background: linear-gradient(90deg, rgba(201,133,0,1) 60%, rgba(172,115,1,1) 100%);
-        
+    .teambox.CT.right .player .hp_bar {
+        background: linear-gradient(270deg,rgba(19,114,166,1) 50%, rgba(20,158,232,1) 100%);
     }
+
+    .teambox.T.left .player .hp_bar {
+        background: linear-gradient(90deg, rgba(172,115,1,1) 50%, rgba(201,133,0,1) 100%);
+    }
+
+    .teambox.T.right .player .hp_bar {
+        background: linear-gradient(90deg, rgba(201,133,0,1) 50%, rgba(172,115,1,1) 100%);
+    }
+
+
 
 .teambox .player .hp_bar.low {
     background-color: red;
@@ -348,10 +360,6 @@
 .hp_bar {
     width:-70px;
 }
-
-
-
-
 
 .player .primary_weapon {
     flex: 1;

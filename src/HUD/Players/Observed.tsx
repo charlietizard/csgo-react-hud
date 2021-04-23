@@ -6,18 +6,18 @@ import TeamLogo from "./../MatchBar/TeamLogo";
 import "./../Styles/observed.css";
 import {apiUrl} from './../../api/api';
 import { getCountry } from "./../countries";
-import { ArmorHelmetCT, ArmorHelmetT, ArmorFullCT, ArmorFullT, HealthFullCT, HealthFullT, BulletsCT, BulletsT } from './../../assets/Icons';
+import { ArmorHelmetCT, ArmorHelmetT, ArmorHelmet, ArmorFullCT, ArmorFullT, ArmorFull, HealthFullCT, HealthFullT, HealthFull, BulletsCT, BulletsT, Bullets, } from './../../assets/Icons';
 import { Veto } from "../../api/interfaces";
 
 
 const armor = {
   full: {
-    CT: ArmorFullCT,
-    T: ArmorFullT
+    CT: ArmorFull,
+    T: ArmorFull
   },
   helmet: {
-    CT: ArmorHelmetCT,
-    T: ArmorHelmetT
+    CT: ArmorHelmet,
+    T: ArmorHelmet
   }
 };
 
@@ -58,7 +58,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
 					<Avatar steamid={player.steamid} height={140} />
-					<TeamLogo team={player.team} height={35} />
 					<div className="username_container">
 						<div className="username">{player.name}</div>
 						<div className="real_name">{player.realName}</div>
@@ -73,7 +72,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 				</div>
 				<div className="stats_row">
 					<div className="health_armor_container">
-						<div className="health-icon icon"><img src={player.team.side === "CT" ? HealthFullCT : HealthFullT} alt={'Health'}/></div>
+						<div className="health-icon icon"><img src={player.team.side === "CT" ? HealthFull : HealthFull} alt={'Health'}/></div>
 						<div className="health text">{player.state.health}</div>
 						<div className="armor-icon icon"><img src={armor[player.state.helmet ? 'helmet' : 'full'][player.team.side]} alt={'Armor'} /></div>
 						<div className="health text">{player.state.armor}</div>

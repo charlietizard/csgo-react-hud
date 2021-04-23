@@ -1,7 +1,7 @@
 .observed {
     position: fixed;
     width: 620px;
-    bottom: 120px;
+    bottom: 50px;
     margin-left: -310px;
     left: 50%;
     height: 86px;
@@ -11,14 +11,34 @@
     background-color: rgba(0,0,0,0.6);
 }
 
+    .observed .avatar_row {
+        flex: auto;
+        width: 146px;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        height: 43px;
+        order: 1;
+    }
+
+    .observed .main_row {
+        flex:auto;
+        order: 2;
+    }
+
+.observed .stats_row {
+    flex-basis: 100%;
+    order: 3;
+
+}
+
 .observed .main_row,
 .observed .stats_row {
-    flex: 1;
     display: flex;
     align-items: center;
     flex-direction: row;
     position: relative;
-    height: 43px;
+    
 }
 
 .observed .stats_row {
@@ -54,6 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left:10px;
 }
 
 .observed .main_row .grenade_container {
@@ -72,6 +93,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-size:28px;
 }
 .observed.T {
     border-bottom: 6px solid var(--color-new-t);
@@ -145,14 +167,25 @@
 .observed .avatar {
     align-self: flex-end;
     display: flex;
+    width: 146px;
+    background-color: rgba(0,0,0,0.0);
 }
-.observed .avatar img {
-    border-radius:50%;
+    .observed .avatar img {
+        width: 146px;
+    }
+
+.observed.T .stats_row .health_armor_container {  
+    background-color: var(--color-new-t);
 }
+
+.observed.CT .stats_row .health_armor_container {
+    background-color: var(--color-new-ct);
+}
+
 .observed .stats_row .health_armor_container {
     display: flex;
     height: 100%;
-    width: 140px;
+    width: 146px;
     justify-content: center;
 }
 
@@ -221,10 +254,13 @@
     width: 48px;
     align-items: center;
     justify-content: center;
+    margin-left:10px;
+    margin-right:-10px;
 }
 
 .observed .stats_row .ammo .ammo_icon_container img {
     max-width: 30px;
+    max-height: 20px;
 }
 
 .observed .stats_row .ammo .ammo_counter {

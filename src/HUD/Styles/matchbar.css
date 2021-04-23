@@ -266,11 +266,11 @@
 }
 .win_text.right {
     left: calc(50% + 63px);
-    background-color: white;
+    background-color: rgba(0,0,0,0.65);
 }
 .win_text.left {
     right: calc(50% + 63px);
-    background-color: white;
+    background-color: rgba(0,0,0,0.65);
 }
 
 

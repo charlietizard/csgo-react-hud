@@ -1,10 +1,10 @@
 {
-    "name":"Lexogrine HUD",
-    "version":"1.5.0",
-    "author":"Lexogrine",
+    "name":"NSE REACT HUD",
+    "version":"1.0.1",
+    "author":"Charlie Tizard",
     "legacy": false,
     "radar": true,
-    "killfeed": true,
+    "killfeed": false,
     "boltobserv":{
         "css":true,
         "maps":true

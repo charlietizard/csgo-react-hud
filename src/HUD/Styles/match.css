@@ -12,31 +12,31 @@
 }
 
 #mappickde_mirage {
-    background-image: url('/assets/images/maps/mirage.png');
+    background-image: url('./../../assets/images/maps/mirage.png');
 }
 
 #mappickde_nuke {
-    background-image: url('/assets/images/maps/nuke.png');
+    background-image: url('./../../assets/images/maps/nuke.png');
 }
 
 #mappickde_inferno {
-    background-image: url('/assets/images/maps/inferno.png');
+    background-image: url('./../../assets/images/maps/inferno.png');
 }
 
 #mappickde_train {
-    background-image: url('/assets/images/maps/train.png');
+    background-image: url('./../../assets/images/maps/train.png');
 }
 
 #mappickde_overpass {
-    background-image: url('/assets/images/maps/overpass.png');
+    background-image: url('./../../assets/images/maps/overpass.png');
 }
 
 #mappickde_vertigo {
-    background-image: url('/assets/images/maps/vertigo.png');
+    background-image: url('./../../assets/images/maps/vertigo.png');
 }
 
 #mappickde_dust2 {
-    background-image: url('/assets/images/maps/dust2.png');
+    background-image: url('./../../assets/images/maps/dust2.png');
 }
 
 
